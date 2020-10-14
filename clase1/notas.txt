@@ -1,0 +1,48 @@
+Java nos provee de 8 tipos de datos basicos
+
+Ejercicio hay que traerlos para la clase que viene
+
+El resto de los de los tipos de datos son 
+
+class Coordenada {
+   public Integer x;
+   public Integer y; 
+}
+
+Coordenada es un tipo de dato.
+
+Coordenada xy = new Coordenada();
+.............   .................
+Declarando la   definiendo un valor
+variable xy     para la variable xy
+
+---------------------------------------------------------------
+
+Herramientas que vamos a utilizar.
+
+java 8. todo lo vamos a instalar c:/opt
+
+cmder.net
+double commander
+git (solo si quieren).
+
+ides.
+   NetBeans  2)  
+   Eclipse   3)
+   Intellij  1)
+
+maven
+gradle
+
+Uno de los problemas historicos que tienen los alumnos es el tema del path.
+
+para compilar con javac
+
+
+
+
+
+
+
+
+

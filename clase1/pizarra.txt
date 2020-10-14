@@ -1,0 +1,137 @@
+------------------------------------------------------------------------
+Diccionario
+------------------------------------------------------------------------
+
+annotations: Surje en java 5, y siven para en tiempo de ejecucucion 
+             un proceso pueda leer nuestras clases compiladas y ver si
+             tienen alguna annotation.
+             Las annotations se dividen en las del compilador
+             @Override
+             @FunctionalInterface
+             
+             las de usuario. El usuario puede crear annotations para
+             una vez compilado el codigo poder que anotaciones existen
+             dentro de una clase.
+
+atributo: Es una variable cuyo scope es la clase.
+          class ServicioEnvioPaquete {
+              public String tipoEnvio;
+          }
+          Con respecto al paradigma de objetos seria el state.
+
+Boolean: es un tipo de datos (recordar clase y tipo es lo MISMO).
+         Puede tener dos estados true o false.
+         El los lenguajes como c: 0 y NO 0.
+
+class: es una estructura tipo template que contiene metodos y atributos.
+       que es template ? se pueden generar diferentes objetos a partir de 
+       una clase.
+
+cliente-servidor: en el mundo de las redes se le llama cliente-servidor
+                  a una arquectura donde el cliente SIEMPRE inicia la
+                  petición y el servidor responde a la petición.
+                  Estamos asumiendo que la red es TCP/IP.
+
+constantes: son idetificadores que tienen un tipo de datos y un valor.
+            ese valor es inmutable, es decir, no puede ser modificado.
+            ATENCION: tipo de dato y clase es exactamente lo MISMO.
+
+Garbage collector: En los lenguajes como c, pascal uno tenia que manejar
+                   la memoria. es decir: asignar memoria para utilizar
+                   y luego borrar memoria que ya no se utiliza.
+                   Manejo automatico de memoria.
+                   Garbage collector es un proceso que va des-asignando
+                   las areas de memoria que ya no se usan.
+
+herencia: en la OOP herencia es la capacidad de una clase heredar comportamiento
+          y estado de otra clase. (NO USAR NUNCA).
+
+if else: son keywords familia de las estrcutras de control.
+         ejemplo: if (condicion-reductible-a-boolean) {
+            sentencia2;
+         }
+         else {
+            sentencia1;
+         }
+
+main: esto viene de lenguaje c; en este lenguaje una funcion llamada main
+      se utiliza para indicar al compilador cual es el punto de entrada
+      de la aplicacion.
+
+objeto teorico: un entidad que tiene estado y comportamiento. el comportamiento
+                son funciones: grabar() y el estado se almacena en variables.
+                si no tiene estado NO es un objeto
+                si no tiene comportamiento NO es un objeto.
+
+objeto java: todos son objetos tengan estado o no; tengan comportamiento o no.
+             es una instancia de una clase.
+             aclaracion: todos los objetos extienden de object (es una clase).
+
+polimorfismo: desde siempre, existio la necesidad de tener un "contrato" entre
+              un cliente -es el que utiliza una libreria-, y el modulo en cuestion.
+              el contrato es la interfaz y el contenido es el codigo de la libreria.
+              polimorfismo: NO cambia el contrato, cambia la implementacion.
+              que es el contrato: nombre de la funcion o funciones y las estrcutras
+              de datos.
+              Ejemplo. obtenerCortes() -> [c1, c2, c3, c4]
+              Cada corte tiene un ancho y un largo, es decir un x, y.
+
+scope: es el ambito donde VIVE una variable. el sentido UNICO que tiene scope. 
+       es que vamos a tener un sistema muchas veces nombres de variabels 
+       repetidas, es por eso que surje la necesidad de un scope.
+
+       class ServicioEnvioPaquete {
+           public Integer idPaquete;
+           public void enviar() {
+              // un scope del metodo
+              Integer x;
+              Integer y;
+              x e y solo son visibles dede enviar
+           }
+           Si quisera referenciar a x o a y desde aca no compila. 
+       }
+       Por otro lado idPaquete su scope es toda la clase ServicioEnvioPaquete.
+       TATUAJE: NUNCA se puede repetir un identificador en un mismo SCOPE
+       en el nivel package, class, metodo, dentro de metodo sub-scopes.
+
+static: Una clase tiene atributos y metodos, si le antepongo a un metodo o a un 
+        atributo la palabra static, le marco que todas las instancias de esa clase
+        van a tener una sola variable que es la marcada como static.
+  
+        ej: class Liston { public Long largo } cada objeto va a tener su propio 
+            largo de liston.
+
+            class Liston { public static Long largo } todos los objetos van a 
+            apuntar a la misma variable largo.
+
+        En general, se usa static cuando estamos haciendo programacion estructurada.
+        se usa mucho en funciones PURAS.
+
+switch: Es una keyword (java tiene 50), es de la familia de estrcuturas de control.
+        sirve para dado un valor. saber que camino seguir en virtud de casos de uso.
+        
+        swich (maquina) {
+           case COSER:
+              sentencia1;
+              sentencia2;
+              break;
+           case MOTOR:
+              sentencia1;
+              sentencia2;
+              break;
+        }
+
+this: this es una variable que NO hay que declararla y es un puntero al objeto
+      en cuyo scope estoy trabajando.
+
+variables: Son identificadores -tienen un nombre y un tipo de datos-, y pueden
+           variar a lo largo de la ejecucion de nuestro codigo.
+           Si analizamos vamos a notar que son muy pocas las variables.
+           ejemplo Integer x = 2; y al rato x = x + 5;
+
+while: keyword de java, familia de "Estructuras de control".
+       el parametro del while es true realiza una iteracion
+       Luego vuelve a evaluar, y continua iterando hasta que sea false.
+
+       while (a<10) { sentencia1; sentencia2; }
+

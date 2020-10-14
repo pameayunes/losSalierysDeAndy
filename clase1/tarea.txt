@@ -1,0 +1,4 @@
+Hoy sale el nro de inflacion
+
+Hacer un programa que calcule el acumulado anual de inflacion.
+
