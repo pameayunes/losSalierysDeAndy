@@ -6,6 +6,7 @@ public class Init {
             System.out.print("Bienvenidos al curso de java ");
             for (int i = 0; i < x; i++) {
                 System.out.print("!");
+                System.out.print("<hr />");
             }
             System.out.println();
         }

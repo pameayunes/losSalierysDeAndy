@@ -1,0 +1,38 @@
+Instalacion correcta de Gradle
+
+voy a la uri https://gradle.org/
+
+Voy a Download - Installing manually
+
+Bajar la version 6.7 - binary-only
+
+Si bien en /users/MI_USUARIO/download/gradle-6.7-bin.zip
+
+tengo que descomprimir la carpeta y copiarla en:
+
+C:\opt\gradle-6.7
+
+Tener en cuenta que en
+
+C:\opt\gradle-6.7\bin se encuentran los scripts de ejecución
+
+Agregar dos variables de entorno
+
+GRADLE_HOME C:\opt\gradle-6.7
+
+y en path debemos agregar: C:\opt\gradle-6.7\bin
+
+crear una carpeta miproyecto y hacer cd miproyecto
+
+escribir gradle init
+
+vamos a tipear 2 application
+
+luego 3 lenguaje java
+
+seleccionamos groovy y junit
+
+hay que mirar el build.gradle 
+
+
+ 

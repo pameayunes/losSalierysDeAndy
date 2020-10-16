@@ -1,0 +1,10 @@
+Hacer el juego de piedra papel o tijera
+
+Algunos alumnos optaron por numeros random.
+Otros por cargar desde teclado.
+Otros hicieron persona contra maquina.
+
+Scanner
+
+Random
+
