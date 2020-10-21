@@ -1,0 +1,78 @@
+Funciones puras
+
+Son aquellas funciones que dado un mismo input siempre responden un mismo output.
+
+suma(x, y) -> z
+
+3 2 -> 5
+6 6 -> 12
+1 2 -> 3
+1 4 -> 5
+
+jugar(piedra, papel)->gana2
+jugar(tijera, piedra)->gana2
+jugar(papel, papel)->gana0
+
+1. piedra 2. papel. 3. tijera.
+0. empate 1. jugador1 2. jugador2
+
+jugar(2,1)->1
+jugar(2,2)->0
+
+Formalidad Dominio [1,2,3] -> [0,1,2]
+
+La ventaja de la funcion pura es que es 100% testeable.
+
+Si internvienen los siguentes factores es impura:
+
+Input teclado.
+Dato aleatoreo que no necesariamente es input.
+Archivos de configuracion NO son constantes (cambian)
+
+Si el cafe tiene descuento de 8 a 9 es pura si y solo si:
+
+le mando la hora como argumento, o tomo la hora de un metodo.
+si la hora la tomo dentro del mismo metodo, NO es testeable, NO es puro.
+    
+Desafio.
+
+Nosotros sabemos que el 0 es empate que el 1 es gano jugador 1 y el 2 gano 2.
+
+Que mensaje enviarle en virtud de si es una maquina si es un persona.
+
+---------------------------------------------------------------------
+Podemos agregar 1 metodo a la interface 
+
+void mostrarResultado()
+
+public interface JugadorPPT {
+    int obtenenerJugada();
+    void mostrarResultado();
+}
+
+Entonces, en el switch
+
+switch (resultado) {
+                case 0:
+                    System.out.println("Empate");
+                    break;
+                case 1:
+                    jugador1.mostrarResultado();
+                    jugador2.mostrarResultado();
+                    break;
+                case 2:
+                    jugador1.mostrarResultado();
+                    jugador2.mostrarResultado();
+                    break;
+}
+
+---------------------------------------------------------------------
+Tip / Ayuda
+
+En ambas implementaciones de JugadorPPT hace falta una property
+porque ? porque de lo contrario, no sabemos que obtuvo Piedra Papel Tijera.
+
+
+
+
+
