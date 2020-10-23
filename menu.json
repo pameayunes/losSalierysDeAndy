@@ -1,0 +1,22 @@
+{
+	"titulo": "Bienvenido - Ingrese una opcion",
+	"opciones": [{
+		"nroOpcion": 1,
+		"descripcion": "Proyecto credito sistetma amortizacion",
+		"continuar": true,
+		"claseInstanciar": "integrador1.SistAmortizacion"
+	}, {
+		"nroOpcion": 2,
+		"descripcion": "Jugar al piedra papel o tijera",
+		"continuar": true,
+		"claseInstanciar": "edu.it.App"
+	}, {
+		"nroOpcion": 3,
+		"descripcion": "Salir",
+		"continuar": false,
+		"claseInstanciar": "N/A"
+	}],
+	"configuracion": {
+		"totalIntentos": 4
+	}
+}

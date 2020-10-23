@@ -1,10 +1,40 @@
-Hacer el juego de piedra papel o tijera
+---------------------------------------------------------------------
+Ejercicio para clase #5 dia Miercoles 28
+---------------------------------------------------------------------
 
-Algunos alumnos optaron por numeros random.
-Otros por cargar desde teclado.
-Otros hicieron persona contra maquina.
+Intentar en lo posible integrar el menu.
 
-Scanner
+Sistemas de amortizacion.
 
-Random
+Deseo obtener un credito de 2000.-
+
+Cobrar en 12 meses, con una tasa de 20%, con un tipo de amortizacion.
+
+Amortizacion es la parte de capital que se re-paga.
+
+Los diferentes sistemas de amortizacion es sobre la parte de capital.
+La parte de interes es mas simple, solo se paga sobre el capital adeudado.
+
+Sistema Frances
+Sistema Aleman
+Sistema Americano
+
+Sistema frances CAPITAL + INTERES: 200 Mensuales. Cuota fija.
+Sistema Aleman se divide el capital en 12 meses 166.60 + Interes
+Sistema Americano se paga solo interes y en la ultima cuota el capital.
+Dado que el sistema americano contampla ciclos de 15 dias o de 6 meses.
+Siempre el interes es igual.
+
+Implementar los 3 tipos de amortizacion utilizando polimorfismo.
+
+
+
+
+
+
+
+
+
+
+
 
