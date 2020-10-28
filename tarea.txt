@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------
-Ejercicio para clase #5 dia Miercoles 28
+Ejercicio para clase #6 dia Viernes 30
 ---------------------------------------------------------------------
 
 Intentar en lo posible integrar el menu.
