@@ -24,7 +24,7 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
-    compile group: 'com.bolivarsoft', name: 'menu', version: '4'
+    compile group: 'com.bolivarsoft', name: 'menu', version: '5'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'

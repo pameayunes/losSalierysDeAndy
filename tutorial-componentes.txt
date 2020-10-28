@@ -1,0 +1,49 @@
+Bajar en zip el repositorio alumnos
+Luego descomprimir; dentro del zip esta en /componentes
+en cualquier carpeta, copiar lo que hay en /componentes
+luego entrar a esa carpeta
+mvn clean install, eventualmente, cambiar la version.
+una vez hecho el install chequear a modo aprendisaje
+C:\Users\NOMBRE_DE_MAQUINA\.m2\repository\com\bolivarsoft\menu\4
+ahi van a encontrar el .jar
+si quieren chusmear lo que hay dentro hacen: unzip -l menu-4.jar
+
+Luego bajar https://github.com/arteysoft/losSalierysDeAndy
+ir a clase4 y van a ver que tiene como dependencia
+
+compile group: 'com.bolivarsoft', name: 'menu', version: '4'
+
+para compilar en gradle es "gradle jar" o utilizar la letra c
+recordar que la letra c dentro tiene "gradle jar".
+
+la letra c es para NO escribir es un script simple.
+
+GUARDA !!!! Puede ser que en mac tenga que ser .sh en vez de .cmd
+
+una vez compilada la solucion sin errores.
+
+recien abro el ide
+
+En el main, delego el control sobre el menu:
+
+public static void main(String[] args) {
+    MenuFileSystem.crearMenu().mostrar();
+}
+
+si NO despliega el menu (throubleshooting).
+
+1) esta el archivo .json en su carpeta ?
+   C:/var/tmp/bolivarsoft/menu.json
+
+NO puede estar en otro lugar.
+
+Despliega el menu, pero me tira un error:
+java.lang.ClassNotFoundException
+Significa que no existe la clase que describe el menu.
+
+java.lang.ClassCastException: integrador1.Hola 
+cannot be cast (Interpretada) to com.bolivarsoft.interfaces.ItemMenu
+
+Solucion: La clase Hola tiene que implementar ItemMenu
+
+
