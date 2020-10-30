@@ -3,43 +3,16 @@
  */
 package edu.it;
 
-import com.bolivarsoft.components.MenuFileSystem;
-import com.bolivarsoft.interfaces.ItemMenu;
-import edu.it.logicaspuras.JuegoPPT;
-import edu.it.polimorfismo.JugadorMaquina;
-import edu.it.polimorfismo.JugadorPPT;
-import edu.it.polimorfismo.JugadorPersona;
-import edu.it.utiles.Utiles;
+import edu.it.vuelcoarchivo.Vuelcoarchivo;
+import edu.it.vuelcoarchivo.VuelcoarchivoHTML;
+import edu.it.vuelcoarchivo.VuelcoarchivoPlano;
 
+public class App {
+    public static void main(String[] args) throws Exception {
+        Vuelcoarchivo vuelcoarchivo = (Vuelcoarchivo)
+                Class.forName(args[0]).newInstance();
+                new VuelcoarchivoHTML();
 
-public class App implements ItemMenu {
-    public static void main(String[] args) {
-        MenuFileSystem.crearMenu().mostrar();
-    }
-
-    @Override
-    public void ejecutar() {
-        JugadorPPT jugador1 = new JugadorPersona("Andy");
-        JugadorPPT jugador2 = new JugadorMaquina("Terminator");
-
-        for (boolean continuar=true; continuar; continuar = Utiles.quiereSeguirJugando()) {
-            int resultado = JuegoPPT.jugar(
-                    jugador1.obtenenerJugada(),
-                    jugador2.obtenenerJugada());
-
-            switch (resultado) {
-                case 0:
-                    System.out.println("Empate");
-                    break;
-                case 1:
-                    System.out.println("Gano: ".concat(jugador1.obtenerNombre()));
-                    break;
-                case 2:
-                    System.out.println("Gano: ".concat(jugador2.obtenerNombre()));
-                    break;
-            }
-            jugador1.informarResultado();
-            jugador2.informarResultado();
-        }
+        vuelcoarchivo.volcar();
     }
 }
