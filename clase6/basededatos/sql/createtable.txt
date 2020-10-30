@@ -1,0 +1,5 @@
+CREATE TABLE
+`clase2`.`alumnos`
+( `id` VARCHAR(36) NOT NULL ,
+`nombre` VARCHAR(128) NOT NULL ,
+`apellido` VARCHAR(128) NOT NULL )
