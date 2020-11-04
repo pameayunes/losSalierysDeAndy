@@ -3,6 +3,7 @@
  */
 package edu.it;
 
+import com.github.javafaker.Faker;
 import edu.it.model.Alumno;
 
 import java.sql.*;
@@ -87,6 +88,65 @@ public class App {
             prepStat.close();
         }
     }
+    private static void operarTransaccion(Connection connMariaDB) {
+        final Integer montoOperacion = 10;
+
+        try {
+            connMariaDB.setAutoCommit(false);
+
+            PreparedStatement prepStat = connMariaDB
+                    .prepareStatement("insert into movimientos values (?, ?)");
+            prepStat.setString(1, UUID.randomUUID().toString());
+            prepStat.setInt(2, montoOperacion);
+            prepStat.execute();
+
+            PreparedStatement prepStat2 = connMariaDB
+                    .prepareStatement("update saldo set monto = monto2 + ?");
+            prepStat2.setInt(1, montoOperacion);
+            prepStat2.execute();
+
+            connMariaDB.commit();
+        }
+        catch (Exception ex) {
+            System.out.println("No se pudo concretar la transaccion");
+            try { connMariaDB.rollback(); } catch (Exception ex2) {}
+        }
+    }
+    private static void crearMuchosAlumnos(Connection connMariaDB, Connection SQLLite) throws Exception {
+        Faker fkr = Faker.instance();
+
+        for (int x:new int[10000]) {
+            Alumno alumno = new Alumno(
+                    UUID.randomUUID().toString(),
+                    fkr.address().firstName(),
+                    fkr.address().lastName());
+
+            System.out.println(alumno);
+
+            PreparedStatement st1 = connMariaDB.prepareStatement("insert into alumnos values (?,?,?);");
+            st1.setString(1, alumno.id);
+            st1.setString(2,alumno.nombre);
+            st1.setString(3, alumno.apellido);
+
+            st1.execute();
+        }
+        for (int x:new int[10000]) {
+            Alumno alumno = new Alumno(
+                    UUID.randomUUID().toString(),
+                    fkr.address().firstName(),
+                    fkr.address().lastName());
+
+            System.out.println(alumno);
+
+            PreparedStatement st1 = SQLLite.prepareStatement("insert into alumnos values (?,?,?);");
+            st1.setString(1, alumno.id);
+            st1.setString(2,alumno.nombre);
+            st1.setString(3, alumno.apellido);
+
+            st1.execute();
+        }
+
+    }
     public static void main(String[] args) throws Exception {
         Class.forName("org.mariadb.jdbc.Driver");
         Connection connMariaDb = DriverManager.getConnection(
@@ -96,14 +156,14 @@ public class App {
         Connection connSqlLite = DriverManager.getConnection(url);
 
         // crearTablas(connMariaDb, connSqlLite);
-        Alumno alumno = new Alumno(
-                UUID.randomUUID().toString(),
-                "Brad",
-                "Binder");
+
+        // crearMuchosAlumnos(connMariaDb, connSqlLite);
 
         // insertarDatos(connMariaDb, connSqlLite, alumno);
 
-        consultarDatos(connMariaDb, connSqlLite);
+        // consultarDatos(connMariaDb, connSqlLite);
+
+        // operarTransaccion(connMariaDb);
 
         connMariaDb.close();
         connSqlLite.close();

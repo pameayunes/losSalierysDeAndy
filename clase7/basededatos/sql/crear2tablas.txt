@@ -1,0 +1,12 @@
+CREATE TABLE
+`clase7`.`movimientos`
+( `id` VARCHAR(36) NOT NULL ,
+`import` INT NOT NULL);
+
+CREATE TABLE
+`clase7`.`saldo`
+(`monto` INT NOT NULL);
+
+insert into movimientos values (uuid(), 1000);
+insert into saldo values (1000);
+

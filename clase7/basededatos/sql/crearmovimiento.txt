@@ -1,0 +1,3 @@
+insert into movimientos values (uuid(), 10);
+update saldo set monto = monto + 10
+
