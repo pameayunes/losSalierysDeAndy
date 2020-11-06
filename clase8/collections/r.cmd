@@ -1,0 +1,1 @@
+java -jar build\libs\collections.jar edu.it.App

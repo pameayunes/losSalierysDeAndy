@@ -1,0 +1,178 @@
+procedimientos o funciones que uno les envia
+una estructura de datos y estos procedimientos
+o funciones -> Puras
+            -> Impuras
+
+Ejemplo de funcion pura Suma, resta, etc.
+todas las matimaticas
+
+Ej. "hola" "mundo" retornar un array con las
+longitudes de cada uno de los parametros.
+
+fnPura("hola", "mundo") -> [4, 5];
+fnPrua("que", "tal") -> [3,3];
+
+calcularPromo(1000) -> 800;
+                    -> 1000;
+
+Jueves+Jubilados+TarjetaNaranja -> 10%
+
+fnPura(JUEVES, TRUE, NARANJA) -> 10%
+fnPura(JUEVES, FALSE, GALICIA) -> 0%
+
+Que podria hacerla impura.
+Si accede a base de datos.
+Si accede a archvivos de texto.
+Si accede a la hora del sistema
+Si accede a un microservicio
+Etc, etc, etc.
+---------------------------------------------------------------------
+Tiene que tener atributos el objeto.
+
+struct Persona {
+   int peso;
+   int altura;
+   char[] nombre;
+}
+
+struct Comprador {
+   Persona p;
+   DatosCompra datosCompra;
+}
+
+Persona p = crearPersona(80, 67, "carlos");
+---------------------------------------------------------------------
+Lazo vendendor: Polimorfismo.
+
+Comprador {
+   Persona persona;
+}
+---------------------------------------------------------------------
+funcion *p = esto es un puntero a funcion.
+
+interface Runnable {}
+
+class CierreLuminaria implements Runnable {
+   public void run() {}
+}
+class CierreSeguridad implements Runnable {
+   public void run() {}
+}
+class ActivacionAlarma implements Runnable {
+   public void run() {}
+}
+
+public void procesoCierre(Runnable... pasos) {
+   for (Runnable r : pasos) {
+       try {
+          r.run();
+       }
+       catch (Exception ex) {
+          // Disparar un mail informando el error.
+       }
+   }
+}
+---------------------------------------------------------------------
+Profe avisa que esta con un problema.
+Receptora recepciona el aviso
+Entra al sistema y escribe.
+"Por motivos del profe la clase no se puede dictar".
+SEND -> Que dipara el send ?
+   send(String mensaje, Alumno[] alumnos, CanalDeComunicacion[] canales) {
+      for (CanalDeComunicacion c : canales) {
+         for (Alumno a : alumnos) {
+            c.notificar(mensaje, a);
+         }
+      }  
+   }
+
+La pregunta es. Que pasa si quiero agregar telegram.
+Que pasa si aparece un tiktok.
+
+------------------------------------------------------
+Auditoria que alumnos fueron notificados y a que hora.
+
+Lazo WhatsApp 15.53
+Jose Alejandro gmail 15.54
+...
+...
+...
+...
+...
+...
+...
+
+Agarra el microservicio de mensajeria y arranca a laburar.
+deja una auditoria de quien se notifico quein no, 
+-----------------------------------------------------------
+calculoCantDisponible(CriterioExclusion[] arrCriEx,
+                      Descuento[] descuentos) {
+
+    for (CriterioExclusion[] arrCriEx) {
+       if (arrCriEx.tiene()) {
+          return 0;
+       }
+    }
+    double base = 200;
+    for (Descuento d : descuentos) {
+       base -= d.obtenerTotalPrestacion();
+    }
+    return base;
+}
+-----------------------------------------------------------
+Los tipos primitivos de java
+
+Se llaman tipo value
+
+2 == 2
+"hola" == "hola" ???????
+
+Object se comporta como un primitivo
+este es un puntero a un objeto
+
+si creo 2 objetos y se los asigno a 2 tipo object
+
+voy a tener dos objetos diferentes
+
+Por eso al1 == al2 es FALSE
+-----------------------------------------------------------
+GIT y BLOCK CHAIN en principio no parece haber mucha diferencia.
+
+1) Ambas son auditables
+2) Ambas son distribuidas en 1000000 maquinas al mismo tiempo.
+3) Son inalterables. Todos ven todo.
+
+4) Bitcoin tiene una diferencia. Que plantea un desafio.
+   Un problma cuya solucion alguien debe encontrar en menos de 10 minutos.
+   y firmarla. ese se lleva como recompensa 25 bitcoins.
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
