@@ -1,40 +1,23 @@
 ---------------------------------------------------------------------
-Ejercicio para clase #6 dia Viernes 30
+Ejercicio para clase #9 dia Miercoles 11 de Noviembre
 ---------------------------------------------------------------------
 
-Intentar en lo posible integrar el menu.
+Una lista de Choferes 
 
-Sistemas de amortizacion.
+class Chofer {
+   id, nombre, leGustaConducir, cantAccidentes
+}
 
-Deseo obtener un credito de 2000.-
+List<Chofer> armar una lista de 8 choferes manualmente.
 
-Cobrar en 12 meses, con una tasa de 20%, con un tipo de amortizacion.
+cuatro metodos.
 
-Amortizacion es la parte de capital que se re-paga.
+List<Chofer> leGustaConducirTuvoAccidentes(List<Chofer> listaChofer);
+List<Chofer> leGustaConducirNoTuvoAccidentes(List<Chofer> listaChofer);
+List<Chofer> NoleGustaConducirTuvoAccidentes(List<Chofer> listaChofer);
+List<Chofer> NoleGustaConducirNOTuvoAccidentes(List<Chofer> listaChofer);
 
-Los diferentes sistemas de amortizacion es sobre la parte de capital.
-La parte de interes es mas simple, solo se paga sobre el capital adeudado.
-
-Sistema Frances
-Sistema Aleman
-Sistema Americano
-
-Sistema frances CAPITAL + INTERES: 200 Mensuales. Cuota fija.
-Sistema Aleman se divide el capital en 12 meses 166.60 + Interes
-Sistema Americano se paga solo interes y en la ultima cuota el capital.
-Dado que el sistema americano contampla ciclos de 15 dias o de 6 meses.
-Siempre el interes es igual.
-
-Implementar los 3 tipos de amortizacion utilizando polimorfismo.
-
-
-
-
-
-
-
-
-
+Si lo pensaramos como una matriz ? estan todas las opciones.
 
 
 
