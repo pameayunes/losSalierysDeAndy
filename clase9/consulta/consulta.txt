@@ -1,0 +1,82 @@
+Es muy diferente Java Enterprise de Java Standard Edition
+
+Java Enterprise es un conjunto de especificaciones, que se traducen en interfaces.
+Estas especificaciones estan documentadas en lo que se llama el Java Community Process
+
+https://www.jcp.org/en/home/index
+
+Cada especificacion esta documentaba en un JSR.
+En el caso de servlet 3.1 que el api que vamos a estudiar.
+
+JSR #340 Java Servlet 3.1 
+JSR #343: Java Message Service 2.0
+
+Implementaciones de JMS 
+   https://developer.jboss.org/docs/DOC-10525
+   https://www.rabbitmq.com/jms-client.html
+   http://activemq.apache.org/
+
+
+SOAP Simple Object Access Protocol 
+Sirve para implementar web services en muchos lenguajes 
+(No necesariamente java)
+https://en.wikipedia.org/wiki/SOAP ****** BASADO EN XML
+
+REST o RESTFULL es una forma de implementacion de servicios web
+mas "livianos" que los implementados en SOAP.
+
+REST Web Services ***** Basado en HTTP y JSON 
+
+XSLT es una forma de presentacion
+de documentos basados en XML y HTML
+
+https://en.wikipedia.org/wiki/XSLT
+
+XML Es un formato de documento comparable con
+JSON
+YAML
+
+Todos los anteriores son formas de presentacion de documentos.
+El que mas vamos a utilizar se JSON
+
+-------------------------------------------------------------
+
+Front-end que se hace en india
+   React
+   Angular
+   Vue
+   jQuery
+   javaScript 
+
+      SPA Single page Application
+
+Back-end que se hace en la comuna 5
+
+Para ir la backend van a utilizar un protocolo que se llama HTTP.
+https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto
+
+Http es un protocolo basado en ASCII (Texto)
+
+Verbos: GET, POST, PUT, DELETE (Los más básicos)
+Codigos de respuesta: (200, 300, 400, 500)
+    Estos codigos, lean wikipedia.
+
+200, 404, 500
+
+200 Indica manejo correcto
+300 Indica necesidad de replantear el request
+400 Indica no se puede realizar ese request
+500 Error en el servidor.
+
+Para realizar un Servidor http vamos a necesitar
+
+    Servlet Container (Tomcat)
+    Una implementacion de servlet que somos nosotros.
+
+
+
+
+
+
+
+
